@@ -18,10 +18,10 @@ class ExpenseItem extends StatelessWidget{
           Row(children: [ //We need a bunch of things in this row of the column so we add a row
             Text('\$${expense.amount.toStringAsFixed(2)}'), //Amount first
             Spacer(), //Basically pushes everything to the right
-            Row(children: [ //Cat and date closely grouped so another row in this row
-            const Icon(Icons.question_mark), //Change this later to look up a correct icon for the cat
+            Row(children: [ //Category and date closely grouped so another row in this row
+            Icon(categoryIcons[expense.category]),
             const SizedBox(width: 8),
-            Text(expense.date.toString()) //fix this date to be correclty formatted
+            Text(expense.formattedDate)
             ],)
           ],)
         ],
